@@ -16,6 +16,7 @@ import Athena from "./components/Athena";
 // import Fixit from "./components/Fixit";
 import About from "./components/About";
 import { ReactComponent as Yellow } from "./assets/Underline_yellow.svg";
+import PageNotReady from "./components/PageNotReady";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -100,7 +101,7 @@ export default function App(props) {
       <CssBaseline />
       <Router>
         <AppBar
-          position="relative"
+          position="absolute"
           classes={{
             colorPrimary: classes.appBarColor,
             root: classes.paperElevation,
@@ -162,13 +163,13 @@ export default function App(props) {
             <Route path="/about">
               <About checkPage={checkPage} />
             </Route>
+            <Route path="/braniac">
+              <PageNotReady />
+            </Route>
+            <Route path="/fixit">
+              <PageNotReady />
+            </Route>
             <Route path="/athena">
-              <Athena />
-            </Route>
-            <Route path="/other1">
-              <Athena />
-            </Route>
-            <Route path="/other2">
               <Athena />
             </Route>
             <Route path="/">

@@ -4,17 +4,30 @@ import Athena1 from "../assets/Athena_1.png";
 import Athena2 from "../assets/Athena_2.png";
 import Athena3 from "../assets/Athena_3.png";
 import Athena4 from "../assets/Athena_4.png";
+import { ReactComponent as Blue } from "../assets/Underline_blue.svg";
 import ScrollableAnchor, { goToAnchor } from "react-scrollable-anchor";
 
 const useStyles = makeStyles((theme) => ({
   text: {
     color: "#333333",
-    fontFamily: "'Nunito', sans-serif",
-    fontSize: "2rem",
+    fontFamily: "'Playfair Display', serif",
+    fontSize: "2.7rem",
+    fontWeight: 800,
     [theme.breakpoints.down("xs")]: {
       fontSize: "1.4rem",
     },
   },
+  subText: {
+    padding: "50px 0",
+    fontSize: "1.4rem",
+    color: "#333333",
+    fontFamily: "'Nunito', sans-serif",
+    [theme.breakpoints.down("xs")]: {
+      fontSize: ".8rem",
+      padding: "20px 0",
+    },
+  },
+
   textExtraBold: {
     fontWeight: 800,
   },
@@ -29,6 +42,8 @@ const useStyles = makeStyles((theme) => ({
   },
   buttonStyle: {
     backgroundColor: "#f78888",
+    fontSize: "1.4rem",
+    fontWeight: 600,
     margin: 20,
     padding: 10,
     width: "80%",
@@ -55,22 +70,26 @@ export default function Athena() {
                 <Grid xs={6}>
                   <Typography
                     variant="h3"
-                    style={{ textAlign: "center" }}
+                    style={{ textAlign: "center", paddingBottom: 10 }}
                     className={`${classes.text} ${classes.textExtraBold}`}
                   >
                     Finding your way around
                   </Typography>
+                  <Blue width="25%" />
                   <Typography
-                    style={{ padding: "50px 0", fontSize: "1.2rem" }}
-                    className={`${classes.text} ${classes.textSemiBold}`}
+                    className={`${classes.subText} ${classes.textSemiBold}`}
                     variant="h5"
                   >
                     This case study is divided into 3 sections. If you’re
                     interested in a particular part of the process, feel free to
                     jump right in!
                   </Typography>
-                  <Grid justify="center" container>
-                    <Grid item>
+                  <Grid
+                    style={{ paddingBottom: 20 }}
+                    justify="center"
+                    container
+                  >
+                    <Grid xs={12} md={4} item>
                       <Button
                         className={classes.buttonStyle}
                         variant="contained"
@@ -80,7 +99,7 @@ export default function Athena() {
                         Research
                       </Button>
                     </Grid>
-                    <Grid item>
+                    <Grid xs={12} md={4} item>
                       <Button
                         className={classes.buttonStyle}
                         variant="contained"
@@ -90,7 +109,7 @@ export default function Athena() {
                         Discoveries
                       </Button>
                     </Grid>
-                    <Grid item>
+                    <Grid xs={12} md={4} item>
                       <Button
                         className={classes.buttonStyle}
                         variant="contained"

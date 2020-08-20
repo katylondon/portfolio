@@ -17,16 +17,21 @@ const useStyles = makeStyles((theme) => ({
   panel: {
     height: 400,
   },
-  text: {
-    color: "#333333",
-    fontFamily: "'Nunito Sans', sans-serif",
-    fontSize: "3em",
+  textPlayfair: {
+    fontFamily: "'Playfair Display', serif",
     fontWeight: 800,
+    spacing: "2%",
+    fontSize: 50,
+    color: "#333333",
+    letterSpacing: 0.3,
   },
   designerText: {
+    fontFamily: "'Nunito', sans-serif",
     color: "#333333",
-    fontFamily: "'Nunito Sans', sans-serif",
-    fontSize: "2.3em",
+    fontSize: 30,
+    fontWeight: 600,
+    letterSpacing: 0.5,
+    paddingTop: 10,
   },
   katy: {
     color: "#90ccf4",
@@ -41,8 +46,11 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   linkText: {
+    fontFamily: "'Nunito', sans-serif",
     color: "#333333",
-    fontFamily: "'Nunito Sans', sans-serif",
+    fontSize: 30,
+    fontWeight: 600,
+    letterSpacing: 0.5,
     paddingTop: 20,
     paddingLeft: 10,
   },
@@ -103,8 +111,12 @@ const Panel = ({
             className={classes.transition}
             style={
               hovered
-                ? { paddingTop: topPad }
-                : { paddingTop: topPad, filter: "grayscale(100%)" }
+                ? { paddingTop: topPad, opacity: 1 }
+                : {
+                    paddingTop: topPad,
+                    filter: "grayscale(100%)",
+                    opacity: 0.5,
+                  }
             }
             src={image}
           />
@@ -123,17 +135,19 @@ const Main = ({ checkPage }) => {
   checkPage(false);
   return (
     <React.Fragment>
-      <main>
+      <main style={{ paddingTop: 150 }}>
         <Container style={{ paddingTop: 0 }} className={classes.panelGrid}>
           <Grid style={{ paddingBottom: 70 }} container>
-            <Grid className={`${classes.text} ${classes.hello}`}>
-              Hello there,&nbsp;
+            <Grid className={classes.textPlayfair}>Hello there,&nbsp;</Grid>
+            <Grid className={`${classes.textPlayfair} ${classes.katy}`}>
+              I'm Katy
             </Grid>
-            <Grid className={`${classes.text} ${classes.katy}`}>I'm Katy</Grid>
-            <Grid className={`${classes.text} ${classes.period}`}>.</Grid>
+            <Grid className={`${classes.textPlayfair} ${classes.period}`}>
+              .
+            </Grid>
             <Grid
               container
-              className={`${classes.designerText} ${classes.textSemiBold} ${classes.hello}`}
+              className={`${classes.designerText} ${classes.textSemiBold}`}
             >
               UX designer / psychologist / storyteller
             </Grid>
@@ -141,7 +155,7 @@ const Main = ({ checkPage }) => {
           <Grid container spacing={4}>
             <Panel
               backGroundColor={"#f78888"}
-              link="athena"
+              link="braniac"
               title="Braniac"
               underline={pink}
               image={braniac}
@@ -150,7 +164,7 @@ const Main = ({ checkPage }) => {
             />
             <Panel
               backGroundColor={"#f3d250"}
-              link="other1"
+              link="fixit"
               title="Fixit"
               underline={yellow}
               image={fixit}
@@ -159,7 +173,7 @@ const Main = ({ checkPage }) => {
             />
             <Panel
               backGroundColor={"#90ccf4"}
-              link="other2"
+              link="athena"
               title="Athena"
               underline={blue}
               image={athena}
