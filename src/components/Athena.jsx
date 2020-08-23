@@ -5,7 +5,6 @@ import Athena2 from "../assets/Athena_2.png";
 import Athena3 from "../assets/Athena_3.png";
 import Athena4 from "../assets/Athena_4.png";
 import { ReactComponent as Blue } from "../assets/Underline_blue.svg";
-import ScrollableAnchor, { goToAnchor } from "react-scrollable-anchor";
 
 const useStyles = makeStyles((theme) => ({
   text: {
@@ -62,6 +61,16 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Athena() {
   const classes = useStyles();
+
+  const scrollToResearch = () => {
+    document.getElementById("Research").scrollIntoView(true);
+  };
+  const scrollToDiscovery = () => {
+    document.getElementById("Discovery").scrollIntoView(true);
+  };
+  const scrollToSolutions = () => {
+    document.getElementById("Solutions").scrollIntoView(true);
+  };
   return (
     <React.Fragment>
       <main>
@@ -102,7 +111,7 @@ export default function Athena() {
                         className={classes.buttonStyle}
                         variant="contained"
                         color="primary"
-                        onClick={() => goToAnchor("research")}
+                        onClick={scrollToResearch}
                       >
                         Research
                       </Button>
@@ -112,7 +121,7 @@ export default function Athena() {
                         className={classes.buttonStyle}
                         variant="contained"
                         color="primary"
-                        onClick={() => goToAnchor("discoveries")}
+                        onClick={scrollToDiscovery}
                       >
                         Discoveries
                       </Button>
@@ -122,7 +131,7 @@ export default function Athena() {
                         className={classes.buttonStyle}
                         variant="contained"
                         color="primary"
-                        onClick={() => goToAnchor("solutions")}
+                        onClick={scrollToSolutions}
                       >
                         Solutions
                       </Button>
@@ -132,15 +141,9 @@ export default function Athena() {
               </Grid>
             </Grid>
           </Grid>
-          <ScrollableAnchor id={"research"}>
-            <img alt="" width="100%" src={Athena2} />
-          </ScrollableAnchor>
-          <ScrollableAnchor id={"discoveries"}>
-            <img alt="" width="100%" src={Athena3} />
-          </ScrollableAnchor>
-          <ScrollableAnchor id={"solutions"}>
-            <img alt="" width="100%" src={Athena4} />
-          </ScrollableAnchor>
+          <img id="Research" alt="" width="100%" src={Athena2} />
+          <img id="Discovery" alt="" width="100%" src={Athena3} />
+          <img id="Solutions" alt="" width="100%" src={Athena4} />
         </div>
       </main>
     </React.Fragment>

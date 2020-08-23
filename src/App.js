@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Switch, Route, Link, HashRouter } from "react-router-dom";
 import Main from "./components/Main";
 import PropTypes from "prop-types";
 import AppBar from "@material-ui/core/AppBar";
@@ -99,7 +99,7 @@ export default function App(props) {
   return (
     <React.Fragment>
       <CssBaseline />
-      <Router basename={process.env.PUBLIC_URL}>
+      <HashRouter basename="/">
         <AppBar
           position="absolute"
           classes={{
@@ -163,7 +163,7 @@ export default function App(props) {
             <Route path="/about">
               <About checkPage={checkPage} />
             </Route>
-            <Route path="/braniac">
+            <Route path="/brainiac">
               <PageNotReady />
             </Route>
             <Route path="/fixit">
@@ -177,7 +177,7 @@ export default function App(props) {
             </Route>
           </Switch>
         </Grid>
-      </Router>
+      </HashRouter>
       <ScrollTop {...props}>
         <Fab
           color="secondary"
