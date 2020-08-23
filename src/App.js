@@ -94,12 +94,12 @@ export default function App(props) {
   const checkPage = (aboutPage) => {
     return setAboutPage(aboutPage);
   };
+  console.log(process.env.PUBLIC_URL);
 
-  console.log(window.location.href, window.location.href.indexOf("about") > -1);
   return (
     <React.Fragment>
       <CssBaseline />
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <AppBar
           position="absolute"
           classes={{

@@ -155,8 +155,8 @@ const Main = ({ checkPage }) => {
           <Grid container spacing={4}>
             <Panel
               backGroundColor={"#f78888"}
-              link="braniac"
-              title="Braniac"
+              link="brainiac"
+              title="Brainiac"
               underline={pink}
               image={braniac}
               imgWidth={95}

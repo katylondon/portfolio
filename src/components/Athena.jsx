@@ -40,6 +40,11 @@ const useStyles = makeStyles((theme) => ({
   ulStyle: {
     listStyle: "none",
   },
+  mobileImage: {
+    [theme.breakpoints.down("xs")]: {
+      paddingTop: 120,
+    },
+  },
   buttonStyle: {
     backgroundColor: "#f78888",
     fontSize: "1.4rem",
@@ -60,7 +65,10 @@ export default function Athena() {
   return (
     <React.Fragment>
       <main>
-        <div style={{ textAlign: "center", backgroundColor: "#ffffff" }}>
+        <div
+          className={classes.mobileImage}
+          style={{ textAlign: "center", backgroundColor: "#ffffff" }}
+        >
           <img alt="" width="100%" src={Athena1} />
 
           {/* Navigating the page */}
