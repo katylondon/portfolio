@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/static/js/main.83cf1f5f.chunk.js",
-    "main.js.map": "/static/js/main.83cf1f5f.chunk.js.map",
+    "main.js": "/static/js/main.503b6be6.chunk.js",
+    "main.js.map": "/static/js/main.503b6be6.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.e5aadcdf.js",
     "runtime-main.js.map": "/static/js/runtime-main.e5aadcdf.js.map",
     "static/js/2.bf10dfca.chunk.js": "/static/js/2.bf10dfca.chunk.js",
     "static/js/2.bf10dfca.chunk.js.map": "/static/js/2.bf10dfca.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.d8876d1821386ad79a1186890504237b.js": "/precache-manifest.d8876d1821386ad79a1186890504237b.js",
+    "precache-manifest.a6295d39624baa1e0f7dace5cc22209b.js": "/precache-manifest.a6295d39624baa1e0f7dace5cc22209b.js",
     "service-worker.js": "/service-worker.js",
     "static/js/2.bf10dfca.chunk.js.LICENSE.txt": "/static/js/2.bf10dfca.chunk.js.LICENSE.txt",
     "static/media/Athena_1.png": "/static/media/Athena_1.0ead843f.png",
@@ -28,6 +28,6 @@
   "entrypoints": [
     "static/js/runtime-main.e5aadcdf.js",
     "static/js/2.bf10dfca.chunk.js",
-    "static/js/main.83cf1f5f.chunk.js"
+    "static/js/main.503b6be6.chunk.js"
   ]
 }
