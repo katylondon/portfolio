@@ -1,33 +1,40 @@
 {
   "files": {
-    "main.js": "/static/js/main.1b263008.chunk.js",
-    "main.js.map": "/static/js/main.1b263008.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.60e78d06.js",
-    "runtime-main.js.map": "/static/js/runtime-main.60e78d06.js.map",
-    "static/js/2.5ecb2d84.chunk.js": "/static/js/2.5ecb2d84.chunk.js",
-    "static/js/2.5ecb2d84.chunk.js.map": "/static/js/2.5ecb2d84.chunk.js.map",
+    "main.js": "/static/js/main.0984b104.chunk.js",
+    "main.js.map": "/static/js/main.0984b104.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.e5aadcdf.js",
+    "runtime-main.js.map": "/static/js/runtime-main.e5aadcdf.js.map",
+    "static/js/2.24ce1907.chunk.js": "/static/js/2.24ce1907.chunk.js",
+    "static/js/2.24ce1907.chunk.js.map": "/static/js/2.24ce1907.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.1f2b69ac5ecab58267e06997dee4546b.js": "/precache-manifest.1f2b69ac5ecab58267e06997dee4546b.js",
+    "precache-manifest.1c20a14dac894ca2dc5a73e272163593.js": "/precache-manifest.1c20a14dac894ca2dc5a73e272163593.js",
     "service-worker.js": "/service-worker.js",
-    "static/js/2.5ecb2d84.chunk.js.LICENSE.txt": "/static/js/2.5ecb2d84.chunk.js.LICENSE.txt",
+    "static/js/2.24ce1907.chunk.js.LICENSE.txt": "/static/js/2.24ce1907.chunk.js.LICENSE.txt",
     "static/media/Athena_1.png": "/static/media/Athena_1.0ead843f.png",
     "static/media/Athena_2.png": "/static/media/Athena_2.251e0ca3.png",
     "static/media/Athena_3.png": "/static/media/Athena_3.8717c1e7.png",
     "static/media/Athena_4.png": "/static/media/Athena_4.be815ba7.png",
     "static/media/Athena_mockup_original.png": "/static/media/Athena_mockup_original.3a1c2f20.png",
     "static/media/Brainiac_mockup_original.png": "/static/media/Brainiac_mockup_original.9f53f16d.png",
+    "static/media/Braniac_1.png": "/static/media/Braniac_1.eff057f7.png",
+    "static/media/Braniac_2.png": "/static/media/Braniac_2.8da940a8.png",
+    "static/media/Braniac_3.png": "/static/media/Braniac_3.4521f293.png",
+    "static/media/Braniac_4.png": "/static/media/Braniac_4.7b3e6afd.png",
+    "static/media/Fixit_1.png": "/static/media/Fixit_1.d5c502f5.png",
+    "static/media/Fixit_2.png": "/static/media/Fixit_2.6ab58723.png",
+    "static/media/Fixit_3.png": "/static/media/Fixit_3.ada2da8b.png",
+    "static/media/Fixit_4.png": "/static/media/Fixit_4.6e3c6048.png",
     "static/media/Fixit_mockup_original.png": "/static/media/Fixit_mockup_original.712e38b3.png",
     "static/media/Katy_profile_ROTATED.png": "/static/media/Katy_profile_ROTATED.8ca6f785.png",
     "static/media/Katy_profile_clips.png": "/static/media/Katy_profile_clips.09499fff.png",
     "static/media/Underline_blue.svg": "/static/media/Underline_blue.71fef336.svg",
     "static/media/Underline_pink.svg": "/static/media/Underline_pink.23751cfb.svg",
     "static/media/Underline_yellow.svg": "/static/media/Underline_yellow.c4ed6ca1.svg",
-    "static/media/about_page_circle.png": "/static/media/about_page_circle.d7c53af1.png",
-    "static/media/page_not_ready.jpeg": "/static/media/page_not_ready.16aab07e.jpeg"
+    "static/media/about_page_circle.png": "/static/media/about_page_circle.d7c53af1.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.60e78d06.js",
-    "static/js/2.5ecb2d84.chunk.js",
-    "static/js/main.1b263008.chunk.js"
+    "static/js/runtime-main.e5aadcdf.js",
+    "static/js/2.24ce1907.chunk.js",
+    "static/js/main.0984b104.chunk.js"
   ]
 }
