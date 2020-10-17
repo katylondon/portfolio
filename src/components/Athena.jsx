@@ -1,9 +1,11 @@
 import { makeStyles, Grid, Typography, Button } from "@material-ui/core";
-import React from "react";
+import React, { useState } from "react";
 import Athena1 from "../assets/Athena_1.png";
 import Athena2 from "../assets/Athena_2.png";
 import Athena3 from "../assets/Athena_3.png";
 import Athena4 from "../assets/Athena_4.png";
+import OnImagesLoaded from "react-on-images-loaded";
+import Loading from "./Loading";
 import { ReactComponent as Blue } from "../assets/Underline_blue.svg";
 
 const useStyles = makeStyles((theme) => ({
@@ -62,6 +64,8 @@ const useStyles = makeStyles((theme) => ({
 export default function Athena() {
   const classes = useStyles();
 
+  const [loading, setLoading] = useState(true);
+
   const scrollToResearch = () => {
     document.getElementById("Research").scrollIntoView(true);
   };
@@ -74,77 +78,83 @@ export default function Athena() {
   return (
     <React.Fragment>
       <main>
-        <div
-          className={classes.mobileImage}
-          style={{ textAlign: "center", backgroundColor: "#ffffff" }}
-        >
-          <img alt="" width="100%" src={Athena1} />
+        <Loading loading={loading}>
+          <OnImagesLoaded
+            onLoaded={() => setTimeout(() => setLoading(false), 1000)}
+          >
+            <div
+              className={classes.mobileImage}
+              style={{ textAlign: "center", backgroundColor: "#ffffff" }}
+            >
+              <img alt="" width="100%" src={Athena1} />
 
-          {/* Navigating the page */}
-          <Grid style={{ paddingRight: 10, paddingLeft: 10 }}>
-            <Grid className={classes.panel} container>
-              <Grid xs={12} justify="center" container>
-                <Grid xs={6}>
-                  <Typography
-                    variant="h3"
-                    style={{ textAlign: "center", paddingBottom: 10 }}
-                    className={`${classes.text} ${classes.textExtraBold}`}
-                  >
-                    Finding your way around
-                  </Typography>
-                  <Blue width="25%" />
-                  <Typography
-                    className={`${classes.subText} ${classes.textSemiBold}`}
-                    variant="h5"
-                  >
-                    This case study is divided into 3 sections. If you’re
-                    interested in a particular part of the process, feel free to
-                    jump right in!
-                  </Typography>
-                  <Grid
-                    style={{ paddingBottom: 20 }}
-                    justify="center"
-                    container
-                  >
-                    <Grid xs={12} md={4} item>
-                      <Button
-                        className={classes.buttonStyle}
-                        variant="contained"
-                        color="primary"
-                        onClick={scrollToResearch}
+              {/* Navigating the page */}
+              <Grid style={{ paddingRight: 10, paddingLeft: 10 }}>
+                <Grid className={classes.panel} container>
+                  <Grid xs={12} justify="center" container>
+                    <Grid xs={6}>
+                      <Typography
+                        variant="h3"
+                        style={{ textAlign: "center", paddingBottom: 10 }}
+                        className={`${classes.text} ${classes.textExtraBold}`}
                       >
-                        Research
-                      </Button>
-                    </Grid>
-                    <Grid xs={12} md={4} item>
-                      <Button
-                        className={classes.buttonStyle}
-                        variant="contained"
-                        color="primary"
-                        onClick={scrollToDiscovery}
+                        Finding your way around
+                      </Typography>
+                      <Blue width="25%" />
+                      <Typography
+                        className={`${classes.subText} ${classes.textSemiBold}`}
+                        variant="h5"
                       >
-                        Discoveries
-                      </Button>
-                    </Grid>
-                    <Grid xs={12} md={4} item>
-                      <Button
-                        className={classes.buttonStyle}
-                        variant="contained"
-                        color="primary"
-                        onClick={scrollToSolutions}
+                        This case study is divided into 3 sections. If you’re
+                        interested in a particular part of the process, feel
+                        free to jump right in!
+                      </Typography>
+                      <Grid
+                        style={{ paddingBottom: 20 }}
+                        justify="center"
+                        container
                       >
-                        Solutions
-                      </Button>
+                        <Grid xs={12} md={4} item>
+                          <Button
+                            className={classes.buttonStyle}
+                            variant="contained"
+                            color="primary"
+                            onClick={scrollToResearch}
+                          >
+                            Research
+                          </Button>
+                        </Grid>
+                        <Grid xs={12} md={4} item>
+                          <Button
+                            className={classes.buttonStyle}
+                            variant="contained"
+                            color="primary"
+                            onClick={scrollToDiscovery}
+                          >
+                            Discoveries
+                          </Button>
+                        </Grid>
+                        <Grid xs={12} md={4} item>
+                          <Button
+                            className={classes.buttonStyle}
+                            variant="contained"
+                            color="primary"
+                            onClick={scrollToSolutions}
+                          >
+                            Solutions
+                          </Button>
+                        </Grid>
+                      </Grid>
                     </Grid>
                   </Grid>
                 </Grid>
               </Grid>
-            </Grid>
-          </Grid>
-          <img id="Research" alt="" width="100%" src={Athena2} />
-          <img id="Discovery" alt="" width="100%" src={Athena3} />
-          <img id="Solutions" alt="" width="100%" src={Athena4} />
-        </div>
+              <img id="Research" alt="" width="100%" src={Athena2} />
+              <img id="Discovery" alt="" width="100%" src={Athena3} />
+              <img id="Solutions" alt="" width="100%" src={Athena4} />
+            </div>
+          </OnImagesLoaded>
+        </Loading>
       </main>
     </React.Fragment>
   );

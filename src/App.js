@@ -13,10 +13,10 @@ import Zoom from "@material-ui/core/Zoom";
 import Grid from "@material-ui/core/Grid";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import Athena from "./components/Athena";
-// import Fixit from "./components/Fixit";
+import Fixit from "./components/Fixit";
+import Braniac from "./components/Braniac";
 import About from "./components/About";
 import { ReactComponent as Yellow } from "./assets/Underline_yellow.svg";
-import PageNotReady from "./components/PageNotReady";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -164,10 +164,10 @@ export default function App(props) {
               <About checkPage={checkPage} />
             </Route>
             <Route path="/brainiac">
-              <PageNotReady />
+              <Braniac />
             </Route>
             <Route path="/fixit">
-              <PageNotReady />
+              <Fixit />
             </Route>
             <Route path="/athena">
               <Athena />
