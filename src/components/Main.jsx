@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: theme.spacing(8),
   },
   panel: {
-    height: 400,
+    minHeight: 400,
   },
   textPlayfair: {
     fontFamily: "'Playfair Display', serif",
