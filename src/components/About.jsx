@@ -108,13 +108,8 @@ const About = ({ checkPage }) => {
           )}
         </Grid>
         <Grid className={classes.textConatiner} xs={12} sm={7} item>
-          <Grid container>
-            <Grid
-              style={{ paddingBottom: 30 }}
-              className={classes.textPlayfair}
-            >
-              Hello there,&nbsp;
-            </Grid>
+          <Grid style={{ paddingBottom: 30, lineHeight: 1 }} container>
+            <Grid className={classes.textPlayfair}>Hello there,&nbsp;</Grid>
             <Grid className={`${classes.textPlayfair} ${classes.katy}`}>
               I'm Katy
             </Grid>
