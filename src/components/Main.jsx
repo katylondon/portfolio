@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 import pink from "../assets/Underline_pink.svg";
 import blue from "../assets/Underline_blue.svg";
 import yellow from "../assets/Underline_yellow.svg";
-import braniac from "../assets/Brainiac_mockup_original.png";
-import fixit from "../assets/Fixit_mockup_original.png";
-import athena from "../assets/Athena_mockup_original.png";
+import braniac from "../assets/Brainiac_mockup_scaled.png";
+import fixit from "../assets/Fixit_mockup_scaled.png";
+import athena from "../assets/Athena_mockup_scaled.png";
 
 const useStyles = makeStyles((theme) => ({
   panelGrid: {
