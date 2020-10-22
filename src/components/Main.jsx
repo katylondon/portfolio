@@ -137,7 +137,7 @@ const Main = ({ checkPage }) => {
     <React.Fragment>
       <main style={{ paddingTop: 150 }}>
         <Container style={{ paddingTop: 0 }} className={classes.panelGrid}>
-          <Grid style={{ paddingBottom: 70, lineHeight: 1 }} container>
+          <Grid style={{ paddingBottom: 70, lineHeight: 1.2 }} container>
             <Grid className={classes.textPlayfair}>Hello there,&nbsp;</Grid>
             <Grid className={`${classes.textPlayfair} ${classes.katy}`}>
               I'm Katy

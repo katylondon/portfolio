@@ -186,7 +186,7 @@ export default function App(props) {
               ? { backgroundColor: "#f78888" }
               : { backgroundColor: "#90ccf4" }
           }
-          size="small"
+          size="large"
           aria-label="scroll back to top"
         >
           <KeyboardArrowUpIcon />
