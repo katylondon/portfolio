@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 30,
     fontWeight: 600,
     letterSpacing: 0.5,
-    paddingTop: 10,
+    paddingTop: 20,
   },
   katy: {
     color: "#90ccf4",
