@@ -75,7 +75,12 @@ const useStyles = makeStyles((theme) => ({
   },
   circle: {
     width: 200,
+    height:175
   },
+  circleContain: {
+    width: 200,
+    height:175
+  }
 }));
 
 const About = ({ checkPage }) => {
@@ -88,7 +93,6 @@ const About = ({ checkPage }) => {
   checkPage(true);
 
   return (
-    <React.Fragment>
       <Grid className={classes.aboutContain} container>
         <Grid className={classes.imageContainer} xs={12} sm={5} item>
           {windowXS ? (
@@ -140,9 +144,10 @@ const About = ({ checkPage }) => {
             </a>
           </Typography>
         </Grid>
+        <Grid className={classes.circleContain}>
         <img alt="decorative circle" src={Circle} className={classes.circle} />
+        </Grid>
       </Grid>
-    </React.Fragment>
   );
 };
 

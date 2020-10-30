@@ -75,6 +75,10 @@ export default function Braniac() {
   const scrollToSolutions = () => {
     document.getElementById("Solutions").scrollIntoView(true);
   };
+
+  const scrollToPresentation = () => {
+    document.getElementById("Presentation").scrollIntoView(true);
+  };
   return (
     <React.Fragment>
       <main>
@@ -114,7 +118,7 @@ export default function Braniac() {
                         justify="center"
                         container
                       >
-                        <Grid xs={12} md={4} item>
+                        <Grid xs={12} md={3} item>
                           <Button
                             className={classes.buttonStyle}
                             variant="contained"
@@ -124,7 +128,7 @@ export default function Braniac() {
                             Research
                           </Button>
                         </Grid>
-                        <Grid xs={12} md={4} item>
+                        <Grid xs={12} md={3} item>
                           <Button
                             className={classes.buttonStyle}
                             variant="contained"
@@ -134,7 +138,7 @@ export default function Braniac() {
                             Discoveries
                           </Button>
                         </Grid>
-                        <Grid xs={12} md={4} item>
+                        <Grid xs={12} md={3} item>
                           <Button
                             className={classes.buttonStyle}
                             variant="contained"
@@ -142,6 +146,16 @@ export default function Braniac() {
                             onClick={scrollToSolutions}
                           >
                             Solutions
+                          </Button>
+                        </Grid>
+                        <Grid xs={12} md={3} item>
+                          <Button
+                            className={classes.buttonStyle}
+                            variant="contained"
+                            color="primary"
+                            onClick={scrollToPresentation}
+                          >
+                            Presentation
                           </Button>
                         </Grid>
                       </Grid>
@@ -154,6 +168,10 @@ export default function Braniac() {
               <img id="Solutions" alt="" width="100%" src={Braniac4} />
             </div>
           </OnImagesLoaded>
+
+        <Grid style={{textAlign:"center", padding: 70}} id="Presentation">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/mY6qlrHx4nk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </Grid>
         </Loading>
       </main>
     </React.Fragment>
