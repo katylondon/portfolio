@@ -46,9 +46,24 @@ const useStyles = makeStyles((theme) => ({
       paddingTop: 120,
     },
   },
+  videoContain: {
+    textAlign:"center", 
+    position: "relative",
+    width: "80%",
+    height: 0,
+    paddingBottom: "50%",
+    margin: "auto",
+  },
+  video: {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    width: "100%",
+    height: "100%"
+  },
   buttonStyle: {
     backgroundColor: "#f78888",
-    fontSize: "1.4rem",
+    fontSize: "1.2rem",
     fontWeight: 600,
     margin: 20,
     padding: 10,
@@ -109,7 +124,7 @@ export default function Braniac() {
                         className={`${classes.subText} ${classes.textSemiBold}`}
                         variant="h5"
                       >
-                        This case study is divided into 3 sections. If you’re
+                        This case study is divided into 4 sections. If you’re
                         interested in a particular part of the process, feel
                         free to jump right in!
                       </Typography>
@@ -168,9 +183,11 @@ export default function Braniac() {
               <img id="Solutions" alt="" width="100%" src={Braniac4} />
             </div>
           </OnImagesLoaded>
-
-        <Grid style={{textAlign:"center", padding: 70}} id="Presentation">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/mY6qlrHx4nk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <Grid id="Presentation" style={{textAlign:"center", marginBottom:20}}>
+          <Typography className={classes.text} variant="h4">Presentation</Typography>
+          </Grid>
+        <Grid className={classes.videoContain}>
+        <iframe width="100%" height="400px" className={classes.video} src="https://www.youtube.com/embed/mY6qlrHx4nk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </Grid>
         </Loading>
       </main>
