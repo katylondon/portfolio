@@ -12,6 +12,7 @@ import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
 import Zoom from "@material-ui/core/Zoom";
 import Grid from "@material-ui/core/Grid";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import MediumIcon from "./assets/Medium_icon.svg";
 import Athena from "./components/Athena";
 import Fixit from "./components/Fixit";
 import Braniac from "./components/Braniac";
@@ -150,6 +151,17 @@ export default function App(props) {
                       <LinkedInIcon fontSize="large" htmlColor="#0099dc" />
                     </a>
                   </Grid>
+
+                  <Grid>
+                    <a
+                      className={classes.links}
+                      href="https://katyromney.medium.com/"
+                      target="blank"
+                    >
+                      <img height={35} width={35} src={MediumIcon} />
+                    </a>
+                  </Grid>
+
                 </Grid>
               </Grid>
             </Grid>
