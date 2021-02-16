@@ -123,7 +123,7 @@ export default function App(props) {
                         position: "absolute",
                         top: 70,
                         width: 60,
-                        right: 200,
+                        right: 265,
                       }}
                     />
                   )}
@@ -138,7 +138,7 @@ export default function App(props) {
                         position: "absolute",
                         top: 70,
                         width: 60,
-                        right: 110,
+                        right: 175,
                       }}
                     />
                   )}
