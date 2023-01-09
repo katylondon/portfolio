@@ -89,14 +89,6 @@ ScrollTop.propTypes = {
 };
 
 export default function App(props) {
-  const classes = useStyles();
-
-  const [aboutPage, setAboutPage] = useState();
-
-  const checkPage = (aboutPage) => {
-    return setAboutPage(aboutPage);
-  };
-  console.log(process.env.PUBLIC_URL);
 
   return (
     <PageNotReady />
