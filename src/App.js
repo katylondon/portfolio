@@ -14,6 +14,7 @@ import Grid from "@material-ui/core/Grid";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import MediumIcon from "./assets/Medium_icon.svg";
 import Athena from "./components/Athena";
+import PageNotReady from "./components/PageNotReady";
 import Fixit from "./components/Fixit";
 import Braniac from "./components/Braniac";
 import About from "./components/About";
@@ -98,112 +99,6 @@ export default function App(props) {
   console.log(process.env.PUBLIC_URL);
 
   return (
-    <React.Fragment>
-      <CssBaseline />
-      <HashRouter basename="/">
-        <AppBar
-          position="absolute"
-          classes={{
-            colorPrimary: classes.appBarColor,
-            root: classes.paperElevation,
-          }}
-        >
-          <Toolbar className={classes.toolBar}>
-            <Grid justify="flex-end" container>
-              <Grid item>
-                <Grid alignItems="center" container>
-                  <Grid>
-                    <Link className={classes.links} to="/">
-                      Work
-                    </Link>
-                  </Grid>
-                  {!aboutPage && (
-                    <Yellow
-                      style={{
-                        position: "absolute",
-                        top: 70,
-                        width: 60,
-                        right: 265,
-                      }}
-                    />
-                  )}
-                  <Grid>
-                    <Link className={classes.links} to="/about">
-                      About
-                    </Link>
-                  </Grid>
-                  {aboutPage && (
-                    <Yellow
-                      style={{
-                        position: "absolute",
-                        top: 70,
-                        width: 60,
-                        right: 175,
-                      }}
-                    />
-                  )}
-                  <Grid>
-                    <a
-                      className={classes.links}
-                      href="https://www.linkedin.com/in/katy-romney/"
-                      target="blank"
-                    >
-                      <LinkedInIcon fontSize="large" htmlColor="#0099dc" />
-                    </a>
-                  </Grid>
-
-                  <Grid>
-                    <a
-                      className={classes.links}
-                      href="https://katyromney.medium.com/"
-                      target="blank"
-                    >
-                      <img height={35} width={35} src={MediumIcon} />
-                    </a>
-                  </Grid>
-
-                </Grid>
-              </Grid>
-            </Grid>
-          </Toolbar>
-        </AppBar>
-        <Toolbar style={{ minHeight: 1 }} id="back-to-top-anchor" />
-        <Grid>
-          {props.children}
-
-          <Switch>
-            <Route path="/about">
-              <About checkPage={checkPage} />
-            </Route>
-            <Route path="/brainiac">
-              <Braniac />
-            </Route>
-            <Route path="/fixit">
-              <Fixit />
-            </Route>
-            <Route path="/athena">
-              <Athena />
-            </Route>
-            <Route path="/">
-              <Main checkPage={checkPage} />
-            </Route>
-          </Switch>
-        </Grid>
-      </HashRouter>
-      <ScrollTop {...props}>
-        <Fab
-          color="secondary"
-          style={
-            aboutPage
-              ? { backgroundColor: "#f78888" }
-              : { backgroundColor: "#90ccf4" }
-          }
-          size="large"
-          aria-label="scroll back to top"
-        >
-          <KeyboardArrowUpIcon />
-        </Fab>
-      </ScrollTop>
-    </React.Fragment>
+    <PageNotReady />
   );
 }
